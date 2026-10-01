@@ -85,6 +85,19 @@
   align-items: end;
 }
 
+/* Reserve the error line on every field so controls share one baseline,
+   whether or not the field has a .field-error element. */
+.form--inline .field {
+  grid-template-rows: auto auto minmax(1em, auto);
+  min-width: 0;
+}
+
+.form--inline .field input,
+.form--inline .field select {
+  width: 100%;
+  min-width: 0;
+}
+
 .field {
   display: grid;
   gap: 0.25rem;
